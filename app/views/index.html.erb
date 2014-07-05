@@ -8,9 +8,9 @@ Cast your votes here:
 <form action="/" method="POST">
   <% @topics.each do |topic| %>
   <label for="<%= topic.id %>"><%= topic.name %></label> 
-  <input type="checkbox" id="<%= topic.id %>" name="topic[count]" value="<%= topic.count += 1 %>"><br>
-  <input type="hidden" name="topic[id]" value="<%= topic.id %>">
-  
+  <input type="checkbox" id="<%= topic.id %>" name="topic[][count]" value="<%= topic.count += 1 %>"><br>
+  <input type="hidden" name="topic[][id]" value="<%= topic.id %>">
+
   <% end %><br>
   <input type="submit" value="Let's review!">
 </form>

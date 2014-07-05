@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
   end
 
   post '/' do
-    # raise params.inspect
+    raise params.inspect
     Topic.update_count(params)
     redirect '/'
   end
